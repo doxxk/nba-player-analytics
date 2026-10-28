@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beyond-the-box-score"
+version = "1.0.0"
+description = "Forecasting young-player development in the NBA beyond age and regression to the mean."
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = ["slow: end-to-end pipeline run on the sample (about a minute)"]
+addopts = "-m 'not slow'"

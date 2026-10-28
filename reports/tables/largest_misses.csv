@@ -1,0 +1,17 @@
+player,player_id,season,age,team,pos_group,mp,bpm,bpm_next,delta_bpm,mp_next,weight,model,pred,resid,kind
+Victor Oladipo,oladivi01,2017,24.0,OKC,Guard,2222.0,-0.5,5.8,6.3,2552.0,1.0,Ridge,0.6163668656573397,5.18363313434266,Outperformed forecast
+Giannis Antetokounmpo,antetgi01,2016,21.0,MIL,Guard,2823.0,2.1,7.3,5.199999999999999,2845.0,1.0,Ridge,2.1383392891520048,5.161660710847995,Outperformed forecast
+Isaiah Hartenstein,harteis01,2021,22.0,2TM,Big,559.0,-0.9,4.5,5.4,1216.0,0.608,Ridge,-0.2250017175869113,4.7250017175869115,Outperformed forecast
+Ja Morant,moranja01,2021,21.0,MEM,Guard,2053.0,-0.4,6.1,6.5,1889.0,0.9445,Ridge,1.6083324147725095,4.49166758522749,Outperformed forecast
+Vit Krejci,krejcvi01,2024,23.0,ATL,Guard,541.0,-3.7,0.7,4.4,1153.0,0.5765,Ridge,-3.722712117055519,4.422712117055519,Outperformed forecast
+Lucas Nogueira,noguelu01,2017,24.0,TOR,Big,1088.0,2.0,5.2,3.2,418.0,0.209,Ridge,0.8565635094540772,4.343436490545923,Outperformed forecast
+De'Andre Hunter,huntede01,2020,22.0,ATL,Wing,2018.0,-4.7,1.2,5.9,678.0,0.339,Ridge,-3.1399860621850566,4.339986062185057,Outperformed forecast
+Dejounte Murray,murrade01,2021,24.0,SAS,Guard,2139.0,0.8,5.4,4.6000000000000005,2366.0,1.0,Ridge,1.1128217915552612,4.28717820844474,Outperformed forecast
+Marquese Chriss,chrisma01,2018,20.0,PHO,Big,1527.0,-2.8,-7.5,-4.7,499.0,0.2495,Ridge,-0.7234444524247797,-6.77655554757522,Underperformed forecast
+Michael Porter Jr.,portemi01,2021,22.0,DEN,Wing,1912.0,3.1,-3.5,-6.6,265.0,0.1325,Ridge,2.8764658137829944,-6.376465813782994,Underperformed forecast
+Cameron Payne,payneca01,2016,21.0,OKC,Guard,698.0,-0.7,-6.1,-5.3999999999999995,462.0,0.231,Ridge,0.1461548636145438,-6.246154863614543,Underperformed forecast
+Kevon Looney,looneke01,2019,22.0,GSW,Big,1481.0,0.5,-5.6,-6.1,262.0,0.131,Ridge,0.21206442362228514,-5.812064423622285,Underperformed forecast
+Dennis Smith Jr.,smithde03,2019,21.0,2TM,Guard,1508.0,-1.9,-6.1,-4.199999999999999,537.0,0.2685,Ridge,-0.3385344337310583,-5.761465566268941,Underperformed forecast
+Cole Anthony,anthoco01,2025,24.0,ORL,Guard,1234.0,0.1,-4.7,-4.8,527.0,0.2635,Ridge,0.9449706267275261,-5.644970626727527,Underperformed forecast
+Cam Thomas,thomaca02,2025,23.0,BRK,Guard,781.0,0.3,-5.2,-5.5,881.0,0.4405,Ridge,0.2588733789613892,-5.458873378961389,Underperformed forecast
+Rob Dillingham,dilliro01,2025,20.0,MIN,Guard,516.0,-4.2,-7.3,-3.0999999999999996,970.0,0.485,Ridge,-1.873105564328193,-5.426894435671807,Underperformed forecast

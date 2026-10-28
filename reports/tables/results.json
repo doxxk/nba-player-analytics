@@ -1,0 +1,107 @@
+{
+  "mode": "full",
+  "source_repo": "sumitrodatta/bball-reference-datasets",
+  "source_commit": "76a70b41ad1c13948f25c62c921ed822e5db7f0e",
+  "design": {
+    "max_age": 24,
+    "min_mp": 500,
+    "min_mp_next": 250,
+    "first_base_season": 2000,
+    "first_test_season": 2016,
+    "last_test_season": 2025,
+    "tuning_cutoff": 2015,
+    "exclude_outcome_seasons": [],
+    "use_ipw": false
+  },
+  "n_model_rows": 3285,
+  "n_historical_rows": 3129,
+  "n_observed": 2847,
+  "dropout_rate": 0.09012464046021096,
+  "n_test_rows": 1258,
+  "test_seasons": [
+    2017,
+    2026
+  ],
+  "tuned": {
+    "ridge_alpha": 30.0,
+    "gbm_params": {
+      "learning_rate": 0.03,
+      "max_depth": 3,
+      "max_iter": 300,
+      "min_samples_leaf": 40
+    }
+  },
+  "metrics": {
+    "Persistence": {
+      "n": 1258,
+      "rmse_w": 1.9056,
+      "mae_w": 1.4917,
+      "rmse": 1.9637,
+      "spearman_delta": NaN,
+      "top10_hit_rate": NaN
+    },
+    "Age curve": {
+      "n": 1258,
+      "rmse_w": 1.7801,
+      "mae_w": 1.4066,
+      "rmse": 1.8915,
+      "spearman_delta": 0.1553,
+      "top10_hit_rate": 0.3594
+    },
+    "Marcel": {
+      "n": 1258,
+      "rmse_w": 1.6913,
+      "mae_w": 1.3351,
+      "rmse": 1.8,
+      "spearman_delta": 0.367,
+      "top10_hit_rate": 0.5
+    },
+    "Ridge": {
+      "n": 1258,
+      "rmse_w": 1.6383,
+      "mae_w": 1.2846,
+      "rmse": 1.7467,
+      "spearman_delta": 0.4066,
+      "top10_hit_rate": 0.619
+    },
+    "Gradient boosting": {
+      "n": 1258,
+      "rmse_w": 1.6743,
+      "mae_w": 1.3091,
+      "rmse": 1.7716,
+      "spearman_delta": 0.3979,
+      "top10_hit_rate": 0.5159
+    }
+  },
+  "ridge_vs_marcel": {
+    "reference": "Marcel",
+    "rmse_diff": -0.052938984816885304,
+    "ci_low": -0.08632377822292796,
+    "ci_high": -0.021174178751745973,
+    "p_model_better": 1.0,
+    "n_players": 505
+  },
+  "gbm_vs_marcel": {
+    "reference": "Marcel",
+    "rmse_diff": -0.016955403818140535,
+    "ci_low": -0.057922543002298446,
+    "ci_high": 0.022410979542445364,
+    "p_model_better": 0.8035,
+    "n_players": 505
+  },
+  "base_rate_improve": 0.28537360890302066,
+  "ridge_skill_pct": 3.130114624996694,
+  "interval_80_coverage": 0.7987857762359063,
+  "interval_80_half_width": 2.1988391695312304,
+  "signal_regression_r2": 0.05659399483611138,
+  "max_abs_corr_interpretive": {
+    "pair": [
+      "ast_percent",
+      "percent_assisted_x2p_fg"
+    ],
+    "r": 0.740719897652255
+  },
+  "marcel_k_full": 250.0,
+  "forecast_base_season": 2026,
+  "runtime_sec": 98.2
+}
