@@ -1,12 +1,29 @@
+# One accent (blue) on cool neutrals. No `base`, so the app follows the
+# viewer's light/dark setting and uses the matching section below.
 [theme]
-base = "light"
 primaryColor = "#2a78d6"
-backgroundColor = "#fcfcfb"
-secondaryBackgroundColor = "#f2f1ed"
-textColor = "#0b0b0b"
+baseRadius = "medium"
+chartCategoricalColors = ["#2a78d6", "#e8703a", "#1baf7a"]
+
+[theme.light]
+primaryColor = "#2a78d6"
+backgroundColor = "#fbfbfc"
+secondaryBackgroundColor = "#f1f3f6"
+textColor = "#14171c"
+borderColor = "#e1e4ea"
+
+[theme.dark]
+primaryColor = "#4b93ea"
+backgroundColor = "#0f1115"
+secondaryBackgroundColor = "#1a1d24"
+textColor = "#eceef2"
+borderColor = "#2a2f38"
 
 [server]
 headless = true
+
+[client]
+toolbarMode = "minimal"
 
 [browser]
 gatherUsageStats = false
