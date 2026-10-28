@@ -61,13 +61,41 @@ git clone https://github.com/doxxk/nba-player-analytics.git
 cd nba-player-analytics
 ```
 
+Create a virtual environment:
+
 ```bash
-python -m venv .venv && source .venv/bin/activate
+python -m venv .venv
+```
+
+Activate it. On macOS or Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+On Windows (PowerShell):
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+If PowerShell refuses with "running scripts is disabled on this system", allow local scripts for your user once, then activate again:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
+
+Your prompt should now start with `(.venv)`. Install the dependencies and the project:
+
+```bash
+pip install -r requirements.txt
 ```
 
 ```bash
-pip install -r requirements.txt && pip install -e .
+pip install -e .
 ```
+
+The commands below are the same on every platform.
 
 Run the full analysis. It downloads about 24 MB once into `data/raw/`, then takes about 2 minutes and rewrites `reports/tables/` and `reports/figures/`:
 
