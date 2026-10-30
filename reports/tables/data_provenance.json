@@ -9,7 +9,7 @@
       "commit": "76a70b41ad1c13948f25c62c921ed822e5db7f0e",
       "bytes": 4629394,
       "sha256": "e1616ffe7759c22b014cbbb7c7ce10a591615e7ef1e08cc0dba4d2a02872948d",
-      "retrieved_utc": "2026-10-28T04:07:11+00:00"
+      "retrieved_utc": "2026-10-28T16:13:09+00:00"
     },
     "totals": {
       "source_file": "Player Totals.csv",
@@ -17,7 +17,7 @@
       "commit": "76a70b41ad1c13948f25c62c921ed822e5db7f0e",
       "bytes": 4492015,
       "sha256": "1c081cd7f9c694755ea2210c3426e709540afedc31c1bf781456f3df4b7582b2",
-      "retrieved_utc": "2026-10-28T04:07:12+00:00"
+      "retrieved_utc": "2026-10-28T16:13:10+00:00"
     },
     "per100": {
       "source_file": "Per 100 Poss.csv",
@@ -25,7 +25,7 @@
       "commit": "76a70b41ad1c13948f25c62c921ed822e5db7f0e",
       "bytes": 4228110,
       "sha256": "c132dc9b958e213d05e1c93fe5cf2b656a613626479b3f3fc4a88e0037a7e175",
-      "retrieved_utc": "2026-10-28T04:07:13+00:00"
+      "retrieved_utc": "2026-10-28T16:13:11+00:00"
     },
     "shooting": {
       "source_file": "Player Shooting.csv",
@@ -33,7 +33,7 @@
       "commit": "76a70b41ad1c13948f25c62c921ed822e5db7f0e",
       "bytes": 2866159,
       "sha256": "3a85c8eeee4edd009cede50347dddf880da9df241195f0977dddec0914f6c827",
-      "retrieved_utc": "2026-10-28T04:07:14+00:00"
+      "retrieved_utc": "2026-10-28T16:13:12+00:00"
     },
     "pbp": {
       "source_file": "Player Play By Play.csv",
@@ -41,7 +41,7 @@
       "commit": "76a70b41ad1c13948f25c62c921ed822e5db7f0e",
       "bytes": 1776637,
       "sha256": "b124e5eb4d361d9cdf7d879926d0aa1cc0eea3b9023f1d441f9d7694c26fae47",
-      "retrieved_utc": "2026-10-28T04:07:15+00:00"
+      "retrieved_utc": "2026-10-28T16:13:13+00:00"
     },
     "season_info": {
       "source_file": "Player Season Info.csv",
@@ -49,7 +49,7 @@
       "commit": "76a70b41ad1c13948f25c62c921ed822e5db7f0e",
       "bytes": 1480090,
       "sha256": "2191b45bfef0536f6d26ba8222f9a81a5cd54aa2aa4495a06b947fd5a0f35e8d",
-      "retrieved_utc": "2026-10-28T04:07:16+00:00"
+      "retrieved_utc": "2026-10-28T16:13:14+00:00"
     },
     "career_info": {
       "source_file": "Player Career Info.csv",
@@ -57,7 +57,7 @@
       "commit": "76a70b41ad1c13948f25c62c921ed822e5db7f0e",
       "bytes": 510345,
       "sha256": "4abda6b51da399a154f7118eed7f0775c73b1335dae5c0d7bc41088da871b9f5",
-      "retrieved_utc": "2026-10-28T04:07:16+00:00"
+      "retrieved_utc": "2026-10-28T16:13:14+00:00"
     },
     "draft": {
       "source_file": "Draft Pick History.csv",
@@ -65,7 +65,7 @@
       "commit": "76a70b41ad1c13948f25c62c921ed822e5db7f0e",
       "bytes": 453618,
       "sha256": "ab4b54439bc5fa81f893879d59992f9066a86b0ea1d419b5dfc08bc7ee82b0a1",
-      "retrieved_utc": "2026-10-28T04:07:16+00:00"
+      "retrieved_utc": "2026-10-28T16:13:15+00:00"
     },
     "team_summaries": {
       "source_file": "Team Summaries.csv",
@@ -73,7 +73,7 @@
       "commit": "76a70b41ad1c13948f25c62c921ed822e5db7f0e",
       "bytes": 334275,
       "sha256": "0a52b3d5f68ca4e3cbdf9041a8b06f4c8ae55935d62b07e9728d0fcf2d6315c9",
-      "retrieved_utc": "2026-10-28T04:07:17+00:00"
+      "retrieved_utc": "2026-10-28T16:13:15+00:00"
     }
   },
   "cleaning_log": [

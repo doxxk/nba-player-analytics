@@ -75,8 +75,8 @@
   },
   "ridge_vs_marcel": {
     "reference": "Marcel",
-    "rmse_diff": -0.052938984816885304,
-    "ci_low": -0.08632377822292796,
+    "rmse_diff": -0.05293898481688508,
+    "ci_low": -0.08632377822292751,
     "ci_high": -0.021174178751745973,
     "p_model_better": 1.0,
     "n_players": 505
@@ -90,10 +90,10 @@
     "n_players": 505
   },
   "base_rate_improve": 0.28537360890302066,
-  "ridge_skill_pct": 3.130114624996694,
+  "ridge_skill_pct": 3.1301146249966716,
   "interval_80_coverage": 0.7987857762359063,
-  "interval_80_half_width": 2.1988391695312304,
-  "signal_regression_r2": 0.05659399483611138,
+  "interval_80_half_width": 2.1988391695312313,
+  "signal_regression_r2": 0.056593994836111605,
   "max_abs_corr_interpretive": {
     "pair": [
       "ast_percent",
@@ -103,5 +103,5 @@
   },
   "marcel_k_full": 250.0,
   "forecast_base_season": 2026,
-  "runtime_sec": 98.2
+  "runtime_sec": 42.1
 }
