@@ -60,6 +60,8 @@
 first full run writes `sample/player_seasons_sample.csv.gz`, a 2011-12 to 2025-26
 extract used for fast offline re-runs (`python -m bbs.pipeline --sample`) and tests.
 
+The dashboard's player-comparison view downloads `Advanced.csv` from the same pinned commit at run time when no local pipeline output exists (`bbs.data.history`), keeping only season, age, minutes and BPM for the forecast players, in memory. Nothing is written to disk.
+
 The repository does contain the analysis outputs in `reports/`: aggregate tables,
 figures, the report, the 2026-27 forecast table, and a few player-season examples
 cited in the report. These quote a limited number of Basketball-Reference values

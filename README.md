@@ -127,7 +127,7 @@ Include the end-to-end sample pipeline test (about 45 seconds):
 pytest -m slow
 ```
 
-Launch the dashboard (every tab works from the committed result tables; the player-comparison view needs one pipeline run):
+Launch the dashboard. Every tab works from the committed result tables; the player-comparison view uses your local pipeline output if it exists, and otherwise downloads the one source table it needs (about 5 MB) on first visit and caches it. That also makes it work on Streamlit Community Cloud, where the pipeline never runs:
 
 ```bash
 streamlit run app.py

@@ -2,8 +2,10 @@
 
 Run with ``streamlit run app.py``. Reads the result tables written by
 ``python -m bbs.pipeline`` (committed under reports/tables). Player history for
-the comparison view comes from the locally generated data, so that tab needs
-one pipeline run; every other tab works from the committed tables alone.
+the comparison view comes from the local pipeline output when it exists;
+otherwise (for example on Streamlit Community Cloud) it is downloaded once from
+the pinned source table and cached. Every other tab works from the committed
+tables alone.
 
 The first four tabs are written for basketball fans; the last two keep the
 technical detail. Every number shown comes from the result tables.
@@ -24,6 +26,7 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "src"))
 
 from bbs.config import IMPROVEMENT_THRESHOLD  # noqa: E402
+from bbs.data import history as history_data  # noqa: E402
 from bbs.features import ALL_FEATURES  # noqa: E402
 from bbs.viz import FEATURE_LABELS, GROUP_LABELS  # noqa: E402
 
@@ -63,12 +66,21 @@ def load_tables() -> tuple[dict[str, pd.DataFrame], dict, Path] | None:
     return None
 
 
-@st.cache_data
-def load_history() -> pd.DataFrame | None:
+@st.cache_data(show_spinner=False)
+def load_history(player_ids: tuple[str, ...]) -> pd.DataFrame:
+    """BPM history for the forecast players.
+
+    Uses the local pipeline output when present; otherwise downloads the pinned
+    Advanced table and applies the pipeline's own cleaning (the case on
+    Streamlit Community Cloud). Failures raise, so they are not cached and the
+    next visit retries.
+    """
     for f in HISTORY_FILES:
         if f.exists():
-            return pd.read_parquet(f) if f.suffix == ".parquet" else pd.read_csv(f)
-    return None
+            h = pd.read_parquet(f) if f.suffix == ".parquet" else pd.read_csv(f)
+            return h.loc[h["player_id"].isin(player_ids),
+                         ["season", "player", "player_id", "age", "team", "mp", "bpm"]]
+    return history_data.build_history(history_data.fetch_advanced(), player_ids)
 
 
 def style(fig: go.Figure, height: int = 380, **kw) -> go.Figure:
@@ -105,7 +117,6 @@ if loaded is None:
              "this page.")
     st.stop()
 T, R, table_dir = loaded
-history = load_history()
 fc_season = R["forecast_base_season"] + 1
 FC = season_label(fc_season)
 LAST = season_label(fc_season - 1)
@@ -434,10 +445,14 @@ with tabs[2]:
 # --------------------------------------------------------------------------
 
 with tabs[3]:
-    if history is None:
-        st.info("Player histories aren't included in the repository (data licensing). Run "
-                "`python -m bbs.pipeline` once to download the data, then reload this page.")
-    else:
+    try:
+        with st.spinner("Loading player histories (first visit only)…"):
+            history = load_history(tuple(sorted(fc["player_id"].unique())))
+    except history_data.DataUnavailableError:
+        history = None
+        st.warning("Couldn't download player histories right now, so this comparison isn't "
+                   "available. Reload the page to try again; every other tab still works.")
+    if history is not None:
         names = sorted(fc["player"].unique())
         default = [n for n in ["Stephon Castle", "Keyonte George", "Kon Knueppel"]
                    if n in names]
